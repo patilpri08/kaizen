@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizen Improvement Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kaizen Improvement Form</h2>
+
+    <form action="submit.php" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Employee Number:</label>
+        <input type="text" name="emp_no" required>
+
+        <label>Department:</label>
+        <input type="text" name="department" required>
+
+        <label>Group Number:</label>
+        <input type="text" name="group_no">
+
+        <label>Kaizen Theme:</label>
+        <input type="text" name="theme" required>
+
+        <label>Problem Definition:</label>
+        <textarea name="problem" rows="4" required></textarea>
+
+        <label>Root Cause Analysis:</label>
+        <textarea name="root_cause" rows="4" required></textarea>
+
+        <label>Countermeasure/Idea:</label>
+        <textarea name="countermeasure" rows="4" required></textarea>
+
+        <label>Before Implementation (Attach Image):</label>
+        <input type="file" name="before_image" accept="image/*">
+
+        <label>After Implementation (Attach Image):</label>
+        <input type="file" name="after_image" accept="image/*">
+
+        <label>Results After Implementation:</label>
+        <textarea name="results" rows="4"></textarea>
+
+        <label>Scope for Deployment:</label>
+        <textarea name="deployment" rows="4"></textarea>
+
+        <label>System Changes:</label>
+        <textarea name="system_changes" rows="4"></textarea>
+
+        <button type="submit">Submit Kaizen Form</button>
+    </form>
+
+</body>
+</html>
