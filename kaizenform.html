@@ -40,8 +40,22 @@
             background: #218838;
         }
     </style>
+    <script>
+  function checkLogin() {
+    var username = prompt("Enter Username:");
+    var password = prompt("Enter Password:");
+
+    if (username === "admin" && password === "1234") {
+      alert("Login successful!");
+    } else {
+      alert("Access denied!");
+      window.location.href = "https://google.com"; // Redirect if login fails
+    }
+  }
+</script>
+
 </head>
-<body>
+<body onload="checkLogin()">
 
     <h2>Kaizen Improvement Form</h2>
 
